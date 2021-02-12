@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <title>Simple CDN - Files</title>
+
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="#ff5aac">
+    <meta name="robots"      content="index, follow">
+    <meta name="viewport"    content="width=device-width, initial-scale=1.0">
+
+    <link rel="shorcut icon" type="image/png" href="icon.png">
+
+    <link rel="preload"    href="stylesheets/main.css" as="style">
+    <link rel="preload"    href="javascripts/secure.js" as="script">
+
+    <link rel="stylesheet" href="stylesheets/main.css">
+    <script src="javascripts/secure.js" defer></script>
+</head>
+
+<body>
+<section class="hero is-black is-fullheight">
+    <div class="hero-body">
+        <div class="container has-text-centered">
+            <img src="icon.png" width="128" height="128" alt="logo">
+            <h1 class="title">Simple CDN - Files</h1>
+
+            <% @files.each do | value | %>
+                <a href="/file/<%= value %>" class="button is-link"><%= value %></a>
+                <br><br>
+            <% end %>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+
+</html>
